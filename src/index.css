@@ -41,12 +41,12 @@
   }
 
   body {
-    @apply bg-cream-50 text-foreground font-playful bg-paper;
+    @apply bg-cream-50 text-foreground font-body bg-paper;
     line-height: 1.6;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-handwriting font-bold;
+    @apply font-serif font-bold;
   }
 }
 
