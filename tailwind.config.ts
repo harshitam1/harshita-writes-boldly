@@ -20,10 +20,9 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'handwriting': ['Caveat', 'cursive'],
-				'playful': ['Kalam', 'cursive'],
-				'casual': ['Patrick Hand', 'cursive'],
-				'indie': ['Indie Flower', 'cursive'],
+				'serif': ['Playfair Display', 'serif'],
+				'sans': ['Inter', 'sans-serif'],
+				'body': ['Crimson Text', 'serif'],
 			},
 			colors: {
 				navy: {
