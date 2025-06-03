@@ -1,10 +1,7 @@
-
 import { Coffee, BookOpen, Camera, Music } from 'lucide-react';
 import Layout from '../components/Layout';
-
 const About = () => {
-  return (
-    <Layout>
+  return <Layout>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="animate-fade-in">
           {/* Header */}
@@ -12,9 +9,7 @@ const About = () => {
             <h1 className="font-grotesk font-bold text-5xl md:text-6xl mb-6">
               <span className="text-gradient">About</span> Me
             </h1>
-            <p className="text-xl text-gray-600">
-              The person behind the stories
-            </p>
+            <p className="text-xl text-gray-600">the person behind the stories</p>
           </div>
 
           {/* Main Content */}
@@ -90,8 +85,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default About;
