@@ -15,7 +15,7 @@ const Index = () => {
               <span className="text-zinc-950">harshita</span>
             </h1>
             
-            <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto leading-relaxed font-grotesk text-slate-50">welcome to my corner of the internet where I share thoughts, stories, and the beautifully messy journey of figuring life out</p>
+            <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto leading-relaxed font-grotesk text-slate-50">welcome to my corner of the internet where i share thoughts, stories, and the messy journey of figuring life out</p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/journal" className="inline-flex items-center px-8 py-4 bg-navy-600 text-white font-semibold rounded-full hover:bg-navy-700 transition-all duration-200 hover-lift card-shadow">

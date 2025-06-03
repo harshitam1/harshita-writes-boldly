@@ -25,9 +25,7 @@ const Navigation = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 bg-gray-100">
           {/* Logo */}
-          <Link to="/" className="font-mono font-bold text-xl text-navy-800 hover:text-navy-900 transition-colors">
-            honestly, harshita
-          </Link>
+          <Link to="/" className="font-mono font-bold text-xl text-navy-800 hover:text-navy-900 transition-colors">honestly,harshita</Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
