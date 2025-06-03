@@ -1,5 +1,5 @@
 
-import { Heart, Coffee, BookOpen, Camera, Music } from 'lucide-react';
+import { Coffee, BookOpen, Camera, Music } from 'lucide-react';
 import Layout from '../components/Layout';
 
 const About = () => {
@@ -9,7 +9,7 @@ const About = () => {
         <div className="animate-fade-in">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="font-poppins font-bold text-5xl md:text-6xl mb-6">
+            <h1 className="font-grotesk font-bold text-5xl md:text-6xl mb-6">
               <span className="text-gradient">About</span> Me
             </h1>
             <p className="text-xl text-gray-600">
@@ -19,12 +19,6 @@ const About = () => {
 
           {/* Main Content */}
           <div className="bg-white rounded-3xl p-8 md:p-12 card-shadow mb-12">
-            <div className="flex justify-center mb-8">
-              <div className="w-32 h-32 bg-gradient-to-br from-coral-400 to-coral-600 rounded-full flex items-center justify-center">
-                <Heart className="w-16 h-16 text-white" />
-              </div>
-            </div>
-
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 Hi there! I'm Harshita, and I'm honestly just figuring life out one day at a time. 
@@ -48,32 +42,32 @@ const About = () => {
 
             {/* Fun Facts */}
             <div className="grid md:grid-cols-2 gap-6 mt-12">
-              <div className="bg-coral-50 rounded-2xl p-6">
-                <h3 className="font-poppins font-semibold text-xl text-coral-800 mb-4">
+              <div className="bg-navy-50 rounded-2xl p-6">
+                <h3 className="font-grotesk font-semibold text-xl text-navy-800 mb-4">
                   Things That Fuel Me
                 </h3>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
-                    <Coffee className="w-5 h-5 text-coral-600" />
+                    <Coffee className="w-5 h-5 text-navy-600" />
                     <span className="text-gray-700">Way too much coffee</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <BookOpen className="w-5 h-5 text-coral-600" />
+                    <BookOpen className="w-5 h-5 text-navy-600" />
                     <span className="text-gray-700">Books that make me cry</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Camera className="w-5 h-5 text-coral-600" />
+                    <Camera className="w-5 h-5 text-navy-600" />
                     <span className="text-gray-700">Capturing random moments</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Music className="w-5 h-5 text-coral-600" />
+                    <Music className="w-5 h-5 text-navy-600" />
                     <span className="text-gray-700">Playlists for every mood</span>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-blue-50 rounded-2xl p-6">
-                <h3 className="font-poppins font-semibold text-xl text-blue-800 mb-4">
+              <div className="bg-slate-50 rounded-2xl p-6">
+                <h3 className="font-grotesk font-semibold text-xl text-slate-800 mb-4">
                   Currently Learning
                 </h3>
                 <div className="space-y-2 text-gray-700">
@@ -87,12 +81,12 @@ const About = () => {
           </div>
 
           {/* Quote */}
-          <div className="text-center bg-gradient-to-r from-coral-500 to-coral-600 rounded-2xl p-8 text-white">
-            <blockquote className="font-poppins text-2xl md:text-3xl font-semibold mb-4">
+          <div className="text-center bg-gradient-to-r from-navy-600 to-navy-800 rounded-2xl p-8 text-white">
+            <blockquote className="font-grotesk text-2xl md:text-3xl font-semibold mb-4">
               "The most authentic thing about us is our capacity to create, to overcome, 
               to endure, to transform, to love and to be greater than our suffering."
             </blockquote>
-            <cite className="text-coral-100">— Ben Okri</cite>
+            <cite className="text-navy-200">— Ben Okri</cite>
           </div>
         </div>
       </div>

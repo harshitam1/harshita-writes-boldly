@@ -23,7 +23,7 @@ const Journal = () => {
         <div className="animate-fade-in">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="font-poppins font-bold text-5xl md:text-6xl mb-6">
+            <h1 className="font-grotesk font-bold text-5xl md:text-6xl mb-6">
               <span className="text-gradient">My</span> Journal
             </h1>
             <p className="text-xl text-gray-600">
@@ -33,8 +33,8 @@ const Journal = () => {
 
           {/* Category Filter */}
           <div className="bg-white rounded-2xl p-6 card-shadow mb-12">
-            <h3 className="font-poppins font-semibold text-lg mb-4 flex items-center gap-2">
-              <Tag className="w-5 h-5 text-coral-500" />
+            <h3 className="font-grotesk font-semibold text-lg mb-4 flex items-center gap-2">
+              <Tag className="w-5 h-5 text-navy-600" />
               Filter by Category
             </h3>
             <div className="flex flex-wrap gap-3">
@@ -42,7 +42,7 @@ const Journal = () => {
                 onClick={() => setSelectedCategory(null)}
                 className={`px-4 py-2 rounded-full transition-all ${
                   selectedCategory === null
-                    ? 'bg-coral-500 text-white'
+                    ? 'bg-navy-600 text-white'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -54,7 +54,7 @@ const Journal = () => {
                   onClick={() => setSelectedCategory(category.name)}
                   className={`px-4 py-2 rounded-full transition-all ${
                     selectedCategory === category.name
-                      ? 'bg-coral-500 text-white'
+                      ? 'bg-navy-600 text-white'
                       : `${category.color} hover:opacity-80`
                   }`}
                 >
@@ -100,7 +100,7 @@ const Journal = () => {
                   </div>
                 </div>
                 
-                <h2 className="font-poppins font-bold text-2xl md:text-3xl text-gray-800 mb-4 hover:text-coral-600 transition-colors">
+                <h2 className="font-grotesk font-bold text-2xl md:text-3xl text-gray-800 mb-4 hover:text-navy-700 transition-colors">
                   <Link to={`/journal/${post.id}`}>
                     {post.title}
                   </Link>
@@ -112,7 +112,7 @@ const Journal = () => {
                 
                 <Link 
                   to={`/journal/${post.id}`}
-                  className="inline-flex items-center text-coral-600 font-semibold hover:text-coral-700 transition-colors"
+                  className="inline-flex items-center text-navy-600 font-semibold hover:text-navy-700 transition-colors"
                 >
                   Read full post →
                 </Link>
@@ -127,7 +127,7 @@ const Journal = () => {
               </p>
               <button
                 onClick={() => setSelectedCategory(null)}
-                className="mt-4 text-coral-600 hover:text-coral-700 font-semibold"
+                className="mt-4 text-navy-600 hover:text-navy-700 font-semibold"
               >
                 View all posts
               </button>

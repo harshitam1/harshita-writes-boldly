@@ -24,7 +24,7 @@ const BlogPost = () => {
           {/* Back Link */}
           <Link 
             to="/journal"
-            className="inline-flex items-center text-coral-600 hover:text-coral-700 transition-colors mb-8"
+            className="inline-flex items-center text-navy-600 hover:text-navy-700 transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Journal
@@ -47,7 +47,7 @@ const BlogPost = () => {
               </div>
             </div>
 
-            <h1 className="font-poppins font-bold text-4xl md:text-5xl text-gray-800 mb-6 leading-tight">
+            <h1 className="font-grotesk font-bold text-4xl md:text-5xl text-gray-800 mb-6 leading-tight">
               {post.title}
             </h1>
 
@@ -80,7 +80,7 @@ const BlogPost = () => {
           <div className="mt-12 flex justify-between items-center">
             <Link 
               to="/journal"
-              className="inline-flex items-center px-6 py-3 bg-coral-500 text-white font-semibold rounded-full hover:bg-coral-600 transition-all duration-200 hover-lift"
+              className="inline-flex items-center px-6 py-3 bg-navy-600 text-white font-semibold rounded-full hover:bg-navy-700 transition-all duration-200 hover-lift"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Journal
@@ -88,7 +88,7 @@ const BlogPost = () => {
             
             <Link 
               to="/contact"
-              className="text-coral-600 hover:text-coral-700 font-semibold transition-colors"
+              className="text-navy-600 hover:text-navy-700 font-semibold transition-colors"
             >
               Share your thoughts →
             </Link>

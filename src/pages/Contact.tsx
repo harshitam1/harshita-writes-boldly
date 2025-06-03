@@ -1,5 +1,5 @@
 
-import { Mail, Instagram, Twitter, Github, Heart, MessageCircle } from 'lucide-react';
+import { Mail, Instagram, Twitter, Github, MessageCircle } from 'lucide-react';
 import Layout from '../components/Layout';
 
 const Contact = () => {
@@ -9,7 +9,7 @@ const Contact = () => {
       icon: Mail,
       url: 'mailto:hello@honestlyharshita.com',
       description: 'Drop me a line',
-      color: 'bg-coral-500 hover:bg-coral-600'
+      color: 'bg-navy-600 hover:bg-navy-700'
     },
     {
       name: 'Instagram',
@@ -40,7 +40,7 @@ const Contact = () => {
         <div className="animate-fade-in">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="font-poppins font-bold text-5xl md:text-6xl mb-6">
+            <h1 className="font-grotesk font-bold text-5xl md:text-6xl mb-6">
               <span className="text-gradient">Let's</span> Connect
             </h1>
             <p className="text-xl text-gray-600">
@@ -52,12 +52,12 @@ const Contact = () => {
           <div className="bg-white rounded-3xl p-8 md:p-12 card-shadow mb-12">
             <div className="text-center mb-12">
               <div className="flex justify-center mb-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-coral-400 to-coral-600 rounded-full flex items-center justify-center">
+                <div className="w-20 h-20 bg-gradient-to-br from-navy-600 to-navy-800 rounded-full flex items-center justify-center">
                   <MessageCircle className="w-10 h-10 text-white" />
                 </div>
               </div>
               
-              <h2 className="font-poppins font-bold text-3xl text-gray-800 mb-4">
+              <h2 className="font-grotesk font-bold text-3xl text-gray-800 mb-4">
                 Say Hello!
               </h2>
               
@@ -82,7 +82,7 @@ const Contact = () => {
                   <div className="flex items-center gap-4">
                     <link.icon className="w-8 h-8" />
                     <div>
-                      <h3 className="font-poppins font-semibold text-lg">
+                      <h3 className="font-grotesk font-semibold text-lg">
                         {link.name}
                       </h3>
                       <p className="opacity-90">
@@ -95,9 +95,8 @@ const Contact = () => {
             </div>
 
             {/* Additional Info */}
-            <div className="bg-coral-50 rounded-2xl p-6">
-              <h3 className="font-poppins font-semibold text-xl text-coral-800 mb-4 flex items-center gap-2">
-                <Heart className="w-5 h-5" />
+            <div className="bg-navy-50 rounded-2xl p-6">
+              <h3 className="font-grotesk font-semibold text-xl text-navy-800 mb-4">
                 A Few Things to Know
               </h3>
               <div className="space-y-3 text-gray-700">
@@ -111,11 +110,11 @@ const Contact = () => {
           </div>
 
           {/* Quote */}
-          <div className="text-center bg-gradient-to-r from-coral-500 to-coral-600 rounded-2xl p-8 text-white">
-            <blockquote className="font-poppins text-2xl md:text-3xl font-semibold mb-4">
+          <div className="text-center bg-gradient-to-r from-navy-600 to-navy-800 rounded-2xl p-8 text-white">
+            <blockquote className="font-grotesk text-2xl md:text-3xl font-semibold mb-4">
               "Connection is why we're here; it is what gives purpose and meaning to our lives."
             </blockquote>
-            <cite className="text-coral-100">— Brené Brown</cite>
+            <cite className="text-navy-200">— Brené Brown</cite>
           </div>
         </div>
       </div>
