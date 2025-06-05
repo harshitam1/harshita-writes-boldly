@@ -104,12 +104,20 @@ Maybe I never will.`,
     excerpt: "Here's why I finally decided to start sharing my thoughts.",
     date: '2025-06-04',
     categories: ['thoughts', 'confidence'],
-    readTime: 4
+    readTime: 4,
+    pinned: true
   }
 ];
 
-// Sort posts by date, newest first
-blogPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+// Sort posts: pinned first, then by date (newest first)
+blogPosts.sort((a, b) => {
+  // If 'a' is pinned and 'b' is not, 'a' comes first.
+  if (a.pinned && !b.pinned) return -1;
+  // If 'b' is pinned and 'a' is not, 'b' comes first.
+  if (!a.pinned && b.pinned) return 1;
+  // Otherwise (both pinned or both not pinned), sort by date (newest first).
+  return new Date(b.date).getTime() - new Date(a.date).getTime();
+});
 
 // Define base categories without counts
 const baseCategories: Omit<Category, 'count'>[] = [

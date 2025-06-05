@@ -7,6 +7,7 @@ export interface BlogPost {
   date: string;
   categories: string[];
   readTime: number;
+  pinned?: boolean;
 }
 
 export interface Category {
