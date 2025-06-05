@@ -68,11 +68,23 @@ const BlogPost = () => {
           {/* Content */}
           <div className="bg-white rounded-3xl p-8 md:p-12 card-shadow">
             <div className="prose prose-lg max-w-none">
-              {post.content.split('\n\n').map((paragraph, index) => (
-                <p key={index} className="text-lg text-gray-700 leading-relaxed mb-6">
-                  {paragraph}
-                </p>
-              ))}
+              {post.content.split('\n\n').map((paragraph, index) => {
+                // Special formatting for Prologue, Becoming, and Epilogue
+                let formattedText = paragraph.replace(/\*\*Prologue\*\*/g, '<strong class="text-2xl font-black text-navy-800">Prologue</strong>');
+                formattedText = formattedText.replace(/\*\*Body \(Becoming\)\*\*/g, '<strong class="text-2xl font-black text-navy-800">Body (Becoming)</strong>');
+                formattedText = formattedText.replace(/\*\*Epilogue\*\*/g, '<strong class="text-2xl font-black text-navy-800">Epilogue</strong>');
+                
+                // Replace remaining **text** with <strong>text</strong>
+                formattedText = formattedText.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                
+                return (
+                  <p 
+                    key={index} 
+                    className="text-lg text-gray-700 leading-relaxed mb-6"
+                    dangerouslySetInnerHTML={{ __html: formattedText }}
+                  />
+                );
+              })}
             </div>
           </div>
 

@@ -1,39 +1,44 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Text:ital@0;1&family=Caveat:wght@400;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 220 25% 98%;
-    --foreground: 220 15% 12%;
+    /* Updated deep navy color palette for text */
+    --background: 0 0% 95%;
+    --foreground: 228 50% 25%;
 
-    --card: 220 25% 98%;
-    --card-foreground: 220 15% 12%;
+    /* Warm cream backgrounds */
+    --card: 43 100% 97%;
+    --card-foreground: 228 50% 25%;
 
-    --popover: 220 25% 98%;
-    --popover-foreground: 220 15% 12%;
+    --popover: 43 100% 97%;
+    --popover-foreground: 228 50% 25%;
 
-    --primary: 220 100% 55%;
-    --primary-foreground: 220 25% 98%;
+    --primary: 228 50% 25%;
+    --primary-foreground: 43 100% 97%;
 
-    --secondary: 220 20% 95%;
-    --secondary-foreground: 220 15% 12%;
+    /* Sage green accents */
+    --secondary: 84 15% 89%;
+    --secondary-foreground: 228 50% 25%;
 
-    --muted: 220 20% 95%;
-    --muted-foreground: 220 10% 40%;
+    --muted: 84 15% 89%;
+    --muted-foreground: 228 30% 40%;
 
-    --accent: 220 20% 95%;
-    --accent-foreground: 220 15% 12%;
+    --accent: 43 80% 58%;
+    --accent-foreground: 228 50% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 15% 85%;
-    --input: 220 15% 85%;
-    --ring: 220 100% 55%;
+    --border: 43 50% 90%;
+    --input: 228 16% 85%;
+    --ring: 43 80% 58%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
   }
 
   * {
@@ -41,70 +46,48 @@
   }
 
   body {
-    @apply bg-cream-50 text-foreground font-body bg-paper;
-    line-height: 1.6;
+    @apply bg-cream-50 text-navy-800 font-body;
+    line-height: 1.8;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.15'%3E%3Ccircle cx='5' cy='5' r='1'/%3E%3Ccircle cx='15' cy='5' r='1'/%3E%3Ccircle cx='25' cy='5' r='1'/%3E%3Ccircle cx='35' cy='5' r='1'/%3E%3Ccircle cx='5' cy='15' r='1'/%3E%3Ccircle cx='15' cy='15' r='1'/%3E%3Ccircle cx='25' cy='15' r='1'/%3E%3Ccircle cx='35' cy='15' r='1'/%3E%3Ccircle cx='5' cy='25' r='1'/%3E%3Ccircle cx='15' cy='25' r='1'/%3E%3Ccircle cx='25' cy='25' r='1'/%3E%3Ccircle cx='35' cy='25' r='1'/%3E%3Ccircle cx='5' cy='35' r='1'/%3E%3Ccircle cx='15' cy='35' r='1'/%3E%3Ccircle cx='25' cy='35' r='1'/%3E%3Ccircle cx='35' cy='35' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-serif font-bold;
+  h1, h2, h3 {
+    @apply font-serif font-bold tracking-wide;
+    text-shadow: 1px 1px 0px rgba(45, 51, 115, 0.1);
+  }
+  
+  h4, h5, h6 {
+    @apply font-['Caveat'] font-semibold tracking-wide;
+  }
+  
+  a {
+    @apply transition-all duration-300;
   }
 }
 
 @layer components {
-  .text-gradient {
-    @apply bg-gradient-to-r from-navy-600 to-navy-800 bg-clip-text text-transparent;
+  .text-mono {
+    @apply font-mono;
   }
   
   .hover-lift {
-    @apply transition-all duration-300 hover:scale-105 hover:rotate-1;
+    @apply transition-all duration-500 hover:scale-105 hover:-rotate-1;
+    transition-timing-function: cubic-bezier(0.2, 0.85, 0.4, 1.275);
   }
   
   .card-shadow {
-    @apply shadow-xl shadow-navy-200/30;
-    filter: drop-shadow(3px 3px 0px rgba(29, 78, 216, 0.1));
+    @apply shadow-lg;
+    filter: drop-shadow(3px 4px 0px rgba(45, 51, 115, 0.15));
   }
 
-  .scrapbook-card {
-    @apply bg-white p-6 shadow-lg transform rotate-1 hover:rotate-0 transition-all duration-300;
-    background: linear-gradient(135deg, #ffffff 0%, #fefcf3 100%);
-    border: 2px solid #e0eaff;
-    position: relative;
+  .card {
+    @apply bg-white p-6 shadow-md rounded-lg transition-all duration-300;
+    background: linear-gradient(135deg, #fefcf3 0%, #f7e59b 100%);
+    border: 1px solid #d4af37;
   }
-
-  .scrapbook-card::before {
-    content: '';
-    position: absolute;
-    top: -8px;
-    left: 20px;
-    width: 20px;
-    height: 20px;
-    background: #c7d8ff;
-    border-radius: 50%;
-    box-shadow: inset 2px 2px 4px rgba(0,0,0,0.1);
-  }
-
-  .scrapbook-card:nth-child(even) {
-    @apply -rotate-1 hover:rotate-0;
-  }
-
-  .scrapbook-card:nth-child(3n) {
-    @apply rotate-2 hover:rotate-0;
-  }
-
-  .tape-effect {
-    position: relative;
-  }
-
-  .tape-effect::after {
-    content: '';
-    position: absolute;
-    top: -10px;
-    right: 20px;
-    width: 40px;
-    height: 20px;
-    background: rgba(199, 216, 255, 0.7);
-    transform: rotate(45deg);
-    box-shadow: inset 1px 1px 2px rgba(0,0,0,0.1);
+  
+  .card:hover {
+    @apply shadow-lg -translate-y-1;
   }
 
   .doodle-border {
@@ -114,15 +97,61 @@
 }
 
 @layer utilities {
-  .animate-float-1 {
-    animation: float 4s ease-in-out infinite;
+  .bg-paper {
+    background-color: #fefcf3;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.15'%3E%3Ccircle cx='5' cy='5' r='1'/%3E%3Ccircle cx='15' cy='5' r='1'/%3E%3Ccircle cx='25' cy='5' r='1'/%3E%3Ccircle cx='35' cy='5' r='1'/%3E%3Ccircle cx='5' cy='15' r='1'/%3E%3Ccircle cx='15' cy='15' r='1'/%3E%3Ccircle cx='25' cy='15' r='1'/%3E%3Ccircle cx='35' cy='15' r='1'/%3E%3Ccircle cx='5' cy='25' r='1'/%3E%3Ccircle cx='15' cy='25' r='1'/%3E%3Ccircle cx='25' cy='25' r='1'/%3E%3Ccircle cx='35' cy='25' r='1'/%3E%3Ccircle cx='5' cy='35' r='1'/%3E%3Ccircle cx='15' cy='35' r='1'/%3E%3Ccircle cx='25' cy='35' r='1'/%3E%3Ccircle cx='35' cy='35' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   }
   
-  .animate-float-2 {
-    animation: float 4s ease-in-out infinite 1s;
+  .rounded-organic {
+    border-radius: 68% 32% 64% 36% / 38% 67% 33% 62%;
   }
   
-  .animate-float-3 {
-    animation: float 4s ease-in-out infinite 2s;
+  .rounded-blob {
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
   }
+  
+  .decoration-wavy {
+    text-decoration-style: wavy;
+  }
+}
+
+/* Custom keyframe animations */
+@keyframes float-1 {
+  0% { transform: translate(0, 0) rotate(12deg); }
+  50% { transform: translate(5px, -5px) rotate(14deg); }
+  100% { transform: translate(0, 0) rotate(12deg); }
+}
+
+@keyframes float-2 {
+  0% { transform: translate(0, 0) rotate(-6deg); }
+  50% { transform: translate(-5px, -7px) rotate(-8deg); }
+  100% { transform: translate(0, 0) rotate(-6deg); }
+}
+
+@keyframes bounce-gentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(1deg); }
+  75% { transform: rotate(-1deg); }
+}
+
+/* Animation classes */
+.animate-float-1 {
+  animation: float-1 6s ease-in-out infinite;
+}
+
+.animate-float-2 {
+  animation: float-2 8s ease-in-out infinite;
+}
+
+.animate-bounce-gentle {
+  animation: bounce-gentle 2s ease-in-out infinite;
+}
+
+.animate-wiggle:hover {
+  animation: wiggle 0.7s ease-in-out;
 }

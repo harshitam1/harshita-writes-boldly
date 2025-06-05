@@ -35,7 +35,7 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`font-sans font-medium transition-all duration-200 px-3 py-2 rounded-lg ${
+                className={`font-mono font-medium transition-all duration-200 px-3 py-2 rounded-lg ${
                   isActive(item.path)
                     ? 'text-navy-800 bg-navy-100'
                     : 'text-gray-700 hover:text-navy-700 hover:bg-cream-100'
@@ -66,7 +66,7 @@ const Navigation = () => {
                   key={item.name}
                   to={item.path}
                   onClick={() => setIsOpen(false)}
-                  className={`block px-4 py-3 rounded-lg text-base font-medium transition-all ${
+                  className={`block px-4 py-3 rounded-lg text-base font-mono font-medium transition-all ${
                     isActive(item.path)
                       ? 'text-navy-800 bg-navy-100'
                       : 'text-gray-700 hover:text-navy-700 hover:bg-cream-100'

@@ -14,69 +14,25 @@ const About = () => {
 
           {/* Main Content */}
           <div className="bg-white rounded-3xl p-8 md:p-12 card-shadow mb-12">
-            <div className="prose prose-lg max-w-none">
+            <div className="prose prose-lg max-w-none text-center">
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                Hi there! I'm Harshita, and I'm honestly just figuring life out one day at a time. 
-                This blog is my way of processing thoughts, sharing stories, and connecting with others 
-                who are also navigating the beautiful chaos of existence.
+                Hi! I'm Harshita Madhan, a UC Riverside student studying biology with dreams of working in healthcare. I'm especially drawn to the intersection of health, society, and human experience.
               </p>
 
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                I believe in the power of honest storytelling, the magic of unexpected conversations, 
-                and the importance of taking up space unapologetically. You'll find me writing about 
-                everything from late-night revelations to coffee shop observations, personal growth 
-                struggles to tiny moments of joy.
+                Life in California has shaped me into someone who thrives on connection and spontaneity. I'm someone who finds joy in life's simple moments: impromptu adventures with friends, deep conversations over coffee, quiet evenings with my dog Panda, and those perfect California sunsets that make everything feel possible. I try to say "yes" to every experience that comes my way and embrace uncertainty as part of the journey.
               </p>
 
               <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                This space is for anyone who's ever felt like they're still figuring things out 
-                (spoiler alert: we all are). Welcome to my corner of the internet where vulnerability 
-                is celebrated and authenticity is the only requirement.
+                This blog is my digital journal, a space where I process thoughts, share snippets of my life, and hopefully connect with others on similar journeys. I believe deeply in the power of storytelling: how our narratives shape us, heal us, and bring us together. Whether I'm writing about my EMT training experiences, reflections from volunteering, or random epiphanies, this space helps me make sense of it all. I hope to document the messy, beautiful process of becoming—whatever that ends up meaning.
               </p>
             </div>
 
-            {/* Fun Facts */}
-            <div className="grid md:grid-cols-2 gap-6 mt-12">
-              <div className="bg-navy-50 rounded-2xl p-6">
-                <h3 className="font-grotesk font-semibold text-xl text-navy-800 mb-4">
-                  Things That Fuel Me
-                </h3>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <Coffee className="w-5 h-5 text-navy-600" />
-                    <span className="text-gray-700">Way too much coffee</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <BookOpen className="w-5 h-5 text-navy-600" />
-                    <span className="text-gray-700">Books that make me cry</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Camera className="w-5 h-5 text-navy-600" />
-                    <span className="text-gray-700">Capturing random moments</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Music className="w-5 h-5 text-navy-600" />
-                    <span className="text-gray-700">Playlists for every mood</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-slate-50 rounded-2xl p-6">
-                <h3 className="font-grotesk font-semibold text-xl text-slate-800 mb-4">
-                  Currently Learning
-                </h3>
-                <div className="space-y-2 text-gray-700">
-                  <p>• How to say no without feeling guilty</p>
-                  <p>• That it's okay to change your mind</p>
-                  <p>• The art of being present</p>
-                  <p>• That growth isn't always comfortable</p>
-                </div>
-              </div>
-            </div>
+            {/* Removed Fun Facts and Currently Learning sections */}
           </div>
 
           {/* Quote */}
-          <div className="text-center bg-gradient-to-r from-navy-600 to-navy-800 rounded-2xl p-8 text-white">
+          <div className="text-center bg-navy-800 rounded-2xl p-8 text-white">
             <blockquote className="font-grotesk text-2xl md:text-3xl font-semibold mb-4">
               "The most authentic thing about us is our capacity to create, to overcome, 
               to endure, to transform, to love and to be greater than our suffering."

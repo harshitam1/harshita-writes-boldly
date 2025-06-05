@@ -1,5 +1,5 @@
 
-import { Mail, Instagram, Twitter, Github, MessageCircle } from 'lucide-react';
+import { Mail, Instagram, Github, MessageCircle } from 'lucide-react';
 import Layout from '../components/Layout';
 
 const Contact = () => {
@@ -7,29 +7,22 @@ const Contact = () => {
     {
       name: 'Email',
       icon: Mail,
-      url: 'mailto:hello@honestlyharshita.com',
+      url: 'mailto:harshitamadhan07@gmail.com',
       description: 'Drop me a line',
       color: 'bg-navy-600 hover:bg-navy-700'
     },
     {
       name: 'Instagram',
       icon: Instagram,
-      url: '#',
-      description: '@honestlyharshita',
+      url: 'https://instagram.com/_h4rshita',
+      description: '@_h4rshita',
       color: 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600'
-    },
-    {
-      name: 'Twitter',
-      icon: Twitter,
-      url: '#',
-      description: '@honestlyharshita',
-      color: 'bg-blue-500 hover:bg-blue-600'
     },
     {
       name: 'GitHub',
       icon: Github,
-      url: '#',
-      description: 'See my code',
+      url: 'https://github.com/harshitam1',
+      description: 'harshitam1',
       color: 'bg-gray-800 hover:bg-gray-900'
     }
   ];
@@ -110,7 +103,7 @@ const Contact = () => {
           </div>
 
           {/* Quote */}
-          <div className="text-center bg-gradient-to-r from-navy-600 to-navy-800 rounded-2xl p-8 text-white">
+          <div className="text-center bg-navy-800 rounded-2xl p-8 text-white">
             <blockquote className="font-grotesk text-2xl md:text-3xl font-semibold mb-4">
               "Connection is why we're here; it is what gives purpose and meaning to our lives."
             </blockquote>
