@@ -101,12 +101,15 @@ Maybe I never will.`,
     id: '6',
     title: 'new beginnings',
     content: `New beginnings are scary, arent they? That's kind of why I started this blog. \n\nI’m someone who overthinks everything. As I stand on the edge of so many new chapters I figured I’d create a space to process it all out loud. College starts in a few short months. New city, new people, new everything. It’s a lot. \n\nSometimes, I feel excited. Like really, genuinely hopeful. And then, bam, my thoughts knock me back. What if people dont like me? What if I dont make any friends? What if I struggle in my classes? What if, what if, what if…\n\n Instead of letting my thoughts spin endlessly in my head, I’m putting them here. On a page where they can exist outside of me. \n\nBut this isn’t a space for every anxious thought in my head. I want this blog to be a way for me to document my life. I want to be able to look back and see how far I’ve come. I want to be able to capture all the in between and figuring it out.\n\nWelcome. I hope you’ll stick around.`,
-    excerpt: "heres why i finally decided to start sharing my thoughts...",
+    excerpt: "Here's why I finally decided to start sharing my thoughts.",
     date: '2025-06-04',
     categories: ['thoughts', 'confidence'],
     readTime: 4
   }
 ];
+
+// Sort posts by date, newest first
+blogPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 // Define base categories without counts
 const baseCategories: Omit<Category, 'count'>[] = [
