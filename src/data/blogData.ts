@@ -108,10 +108,25 @@ Maybe I never will.`,
   }
 ];
 
-export const categories: Category[] = [
-  { name: 'personal', color: 'bg-coral-100 text-coral-800', count: 2 },
-  { name: 'thoughts', color: 'bg-blue-100 text-blue-800', count: 4 },
-  { name: 'life lessons', color: 'bg-green-100 text-green-800', count: 1 },
-  { name: 'confidence', color: 'bg-pink-100 text-pink-800', count: 2 },
-  { name: 'self-reflection', color: 'bg-yellow-100 text-yellow-800', count: 2 }
+// Define base categories without counts
+const baseCategories: Omit<Category, 'count'>[] = [
+  { name: 'personal', color: 'bg-coral-100 text-coral-800' },
+  { name: 'thoughts', color: 'bg-blue-100 text-blue-800' },
+  { name: 'life lessons', color: 'bg-green-100 text-green-800' },
+  { name: 'confidence', color: 'bg-pink-100 text-pink-800' },
+  { name: 'self-reflection', color: 'bg-yellow-100 text-yellow-800' }
 ];
+
+// Function to calculate counts and create the final categories array
+const getCategoriesWithCounts = (posts: BlogPost[], baseCats: Omit<Category, 'count'>[]): Category[] => {
+  return baseCats.map(baseCat => {
+    const count = posts.filter(post => post.categories.includes(baseCat.name)).length;
+    return {
+      ...baseCat,
+      count
+    };
+  });
+};
+
+// Export the categories with dynamically calculated counts
+export const categories: Category[] = getCategoriesWithCounts(blogPosts, baseCategories);
