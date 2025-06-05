@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, Coffee, Tag } from 'lucide-react';
+import { Calendar, Coffee, Tag, Pin } from 'lucide-react';
 import { blogPosts, categories } from '../data/blogData';
 import Layout from '../components/Layout';
 
@@ -86,6 +86,12 @@ const Journal = () => {
                       <Coffee className="w-4 h-4" />
                       <span>{post.readTime} min read</span>
                     </div>
+                    {post.pinned && (
+                      <div className="flex items-center gap-1 text-sm text-yellow-600 bg-yellow-100 px-2 py-1 rounded-full ml-2">
+                        <Pin className="w-3 h-3" />
+                        <span>Pinned</span>
+                      </div>
+                    )}
                   </div>
                   
                   <div className="flex flex-wrap gap-2">
